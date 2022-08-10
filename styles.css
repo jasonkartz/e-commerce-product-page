@@ -60,6 +60,61 @@ header {
     margin-left: 2rem;
 }
 
+.product-image {
+    margin: auto;
+    width: 100%;
+}
+
+.description {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.brand {
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+    color: var(--orange);
+    letter-spacing: clamp(.185rem, 2vw, .2rem);
+    text-transform: uppercase;
+}
+
+.product {
+    font-size: clamp(2.8rem, 4vw, 4.4rem);
+    line-height: clamp(3.2rem, 4vw, 4.8rem);
+}
+
+p {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    line-height: clamp(2.5rem, 2vw, 2.6rem);
+}
+
+.pricing-info {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sale-price {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.discount {
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    color: var(--orange);
+    background-color: var(--pale-orange);
+}
+
+.original-price {
+    margin-left: auto;
+    text-decoration: line-through;
+    font-weight: 700;
+    color: var(--gray-blue)
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;

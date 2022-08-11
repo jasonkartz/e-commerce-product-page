@@ -28,7 +28,7 @@ body {
 
 button:hover {
     cursor: pointer;
-    opacity: .5;
+    /* opacity: .5; */
 }
 
 header {
@@ -45,6 +45,10 @@ header {
     height: 1.5rem;
     margin-right: 2rem;
     margin-top: .4rem;
+}
+
+#btn-menu:active {
+    opacity: .5;
 }
 
 #logo {}
@@ -145,6 +149,10 @@ p {
     border: none;
 }
 
+.add-to-cart-qty button:active {
+    opacity: .5;
+}
+
 .add-to-cart-qty span {
     font-weight: 700;
 }
@@ -160,7 +168,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    box-shadow: 0px 20px 15px -7px rgba(255, 126, 27, .2);
+    box-shadow: 0px 20px 15px -7px rgba(255, 126, 27, .3);
 }
 
 .add-to-cart-btn:active {

@@ -33,8 +33,13 @@ button:hover {
 
 header {
     padding: 2rem;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid: [row1-start] "logo-container cart-avatar-containter"[row1-end] [row2-start] "nav nav"[row2-end];
+    justify-content: space-between;
+}
+
+#logo-container {
+    grid-area: logo-container;
 }
 
 #btn-menu {
@@ -42,9 +47,9 @@ header {
     background-size: cover;
     border: none;
     width: 1.6rem;
-    height: 1.5rem;
-    margin-right: 2rem;
-    margin-top: .4rem;
+    height: 1.6rem;
+    margin-right: 1.5rem;
+    grid-area: btn-menu;
 }
 
 #btn-menu:active {
@@ -53,12 +58,19 @@ header {
 
 #logo {}
 
+#cart-avatar-containter {
+    display: flex;
+    align-content: center;
+    gap: 3rem;
+    grid-area: cart-avatar-containter;
+}
+
 #cart {
     background: url("./images/icon-cart.svg") no-repeat;
+    background-size: cover;
     width: 2.2rem;
     height: 2.2rem;
-    margin-left: auto;
-    margin-top: .4rem;
+    margin-top: .2rem;
 }
 
 #avatar {
@@ -66,7 +78,10 @@ header {
     background-size: cover;
     width: 2.4rem;
     height: 2.4rem;
-    margin-left: 2rem;
+}
+
+nav {
+    grid-area: nav;
 }
 
 main {

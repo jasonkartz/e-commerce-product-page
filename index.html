@@ -20,7 +20,7 @@
         <img id="logo" src="./images/logo.svg" alt="sneakers logo" />
       </div>
       <div id="cart-avatar-containter">
-        <div id="cart"></div>
+        <div id="cart-icon"></div>
         <div id="avatar"></div>
       </div>
       <nav id="nav">
@@ -34,6 +34,14 @@
       </nav>
     </header>
     <main id="main">
+      <section id="cart">
+        <div id="cart-header">
+          <h3>Cart</h3>
+        </div>
+        <div id="cart-main">
+          <span>Your cart is empty</span>
+        </div>
+      </section>
       <section id="product-images">
         <div id="img-carousel">
           <button id="img-btn-previous">
@@ -75,15 +83,15 @@
         </div>
         <div class="add-to-cart">
           <div class="add-to-cart-qty">
-            <button class="qty-minus">
+            <button id="qty-minus">
               <img
                 class="icon-minus"
                 src="./images/icon-minus.svg"
                 alt="add to cart minus icon"
               />
             </button>
-            <span class="qty-amount">0</span>
-            <button class="qty-plus">
+            <span id="qty-amount">0</span>
+            <button id="qty-plus">
               <img
                 class="icon-plus"
                 src="./images/icon-plus.svg"

@@ -91,6 +91,7 @@ header {
   position: relative;
   bottom: 0.75rem;
   left: 0.75rem;
+  visibility: hidden;
 }
 #avatar {
   background: url("./images/image-avatar.png") no-repeat;
@@ -127,6 +128,7 @@ main {
   margin-bottom: 4rem;
 }
 #cart {
+  visibility: hidden;
   background-color: white;
   border-radius: 3.5%;
   width: 95vw;
@@ -156,11 +158,10 @@ main {
 }
 #cart-empty {
   font-weight: 700;
-  display: none;
 }
 #cart-product {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   gap: 1.5rem;
 }
@@ -179,6 +180,9 @@ main {
   height: 1.6rem;
   width: 1.4rem;
   align-self: center;
+}
+#btn-checkout {
+  display: none;
 }
 #product-images {
   padding-top: 6.3rem;

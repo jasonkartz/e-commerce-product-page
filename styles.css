@@ -338,5 +338,23 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
+  header {
+    position: static;
+    grid: [row1-start] "logo-container nav cart-avatar-containter" [row1-end];
+    border-bottom: 1px solid var(--border-gray);
+    max-width: 120rem;
+    margin-inline: auto;
+  }
+  #btn-menu {
+    display: none;
+  }
+  nav {
+    display: inline;
+    padding-block: 0;
+    width: auto;
+  }
+  nav ul {
+    flex-direction: row;
+  }
 }

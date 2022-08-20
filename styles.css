@@ -7,9 +7,10 @@
   --pale-orange: hsl(25, 100%, 94%);
   /* Neutral Colors */
   --dark-blue: hsl(220, 13%, 13%);
-  --dark-gray-blue: hsl(219, 9%, 45%);
+  --dark-gray-blue: hsl(217, 9%, 45%);
   --gray-blue: hsl(220, 14%, 75%);
   --light-gray-blue: hsl(223, 64%, 98%);
+  --border-gray: #e4e9f2;
 }
 
 * {
@@ -76,8 +77,21 @@ header {
   width: 2.4rem;
   height: 2.2rem;
   margin-top: 0.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
-
+#cart-qty-preview {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--orange);
+  padding: 0.05rem 0.75rem;
+  border-radius: 7px;
+  position: relative;
+  bottom: 0.75rem;
+  left: 0.75rem;
+}
 #avatar {
   background: url("./images/image-avatar.png") no-repeat;
   background-size: cover;
@@ -90,9 +104,13 @@ nav {
   grid-area: nav;
   padding-block: 5rem;
   color: var(--dark-blue);
+  background-color: white;
+  width: 100vw;
+  z-index: 2;
 }
 nav ul {
   list-style: none;
+  background-color: white;
   padding-left: 0;
   display: flex;
   flex-direction: column;
@@ -107,6 +125,60 @@ nav ul li:hover {
 
 main {
   margin-bottom: 4rem;
+}
+#cart {
+  background-color: white;
+  border-radius: 3.5%;
+  width: 95vw;
+  height: 80vw;
+  position: absolute;
+  top: 7.5rem;
+  left: 2.6vw;
+  z-index: 1;
+  box-shadow: 0px 20px 15px -7px rgba(0, 0, 0, 0.2);
+}
+#cart h3 {
+  color: var(--dark-blue);
+  font-size: 1.6rem;
+}
+#cart-header {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-gray);
+}
+#cart-main {
+  padding: 2rem;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+#cart-empty {
+  font-weight: 700;
+  display: none;
+}
+#cart-product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+#cart-product img {
+  border-radius: 4px;
+}
+#cart-total {
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+#cart-delete-item {
+  background: url("./images/icon-delete.svg") no-repeat;
+  background-size: contain;
+  border: none;
+  height: 1.6rem;
+  width: 1.4rem;
+  align-self: center;
 }
 #product-images {
   padding-top: 6.3rem;
@@ -227,6 +299,7 @@ p {
 
 .btn-main {
   padding: 2rem;
+  width: 100%;
   background-color: var(--orange);
   border: none;
   border-radius: 1rem;

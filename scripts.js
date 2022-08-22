@@ -158,5 +158,18 @@ function menuClose() {
   }
 }
 
+window.onresize = () => {
+  if (window.innerWidth >= 1000) {
+    nav.style.display = "inline";
+    cartAvatar.style.display = "flex";
+    isMenuOpen = true;
+  } else {
+    nav.style.display = "none";
+    menuBtn.style.background = "url('./images/icon-menu.svg') no-repeat";
+    cartAvatar.style.display = "flex";
+    isMenuOpen = false;
+  }
+};
+
 menuBtn.addEventListener("click", menuToggle);
 main.addEventListener("click", menuClose);

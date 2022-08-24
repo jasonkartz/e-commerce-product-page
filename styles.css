@@ -406,7 +406,7 @@ p {
     margin-inline: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   #img-carousel-container {
     display: none;

@@ -525,7 +525,6 @@ p {
   }
   #add-to-cart-btn {
     width: 60%;
-    box-shadow: none;
   }
   #add-to-cart-btn:hover {
     opacity: 0.5;

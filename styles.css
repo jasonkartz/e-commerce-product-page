@@ -358,13 +358,16 @@ p {
 @media (min-width: 1000px) {
   header {
     position: static;
-    grid: [row1-start] "logo-container nav cart-avatar-containter" [row1-end];
+    display: flex;
     border-bottom: 1px solid var(--border-gray);
     width: 95%;
     max-width: 120rem;
     margin-inline: auto;
     padding: 2rem 0;
     align-items: center;
+    justify-content: flex-start;
+
+    gap: 4rem;
   }
   #btn-menu {
     display: none;
@@ -387,11 +390,15 @@ p {
     font-weight: 400;
     color: var(--dark-gray-blue);
     font-size: 1.5rem;
+    gap: 4rem;
   }
   nav ul li:hover {
     color: var(--dark-blue);
     text-decoration: underline solid 4px var(--orange);
     text-underline-offset: 3.5rem;
+  }
+  #cart-avatar-containter {
+    margin-left: auto;
   }
   main {
     width: 95%;

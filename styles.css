@@ -137,14 +137,15 @@ main {
   margin-bottom: 4rem;
 }
 #cart {
-  visibility: hidden;
+  display: none;
   background-color: white;
   border-radius: 3.5%;
   width: 95vw;
   height: 80vw;
   position: absolute;
-  top: 7.5rem;
-  left: 2.6vw;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   z-index: 1;
   box-shadow: 0px 20px 15px 0px rgba(0, 0, 0, 0.2);
 }
@@ -198,6 +199,9 @@ main {
 }
 #product-images {
   padding-top: 6.3rem;
+}
+#close-carousel {
+  display: none;
 }
 #img-carousel {
   background: url("./images/image-product-1.jpg") no-repeat;
@@ -391,7 +395,7 @@ p {
   }
   main {
     width: 95%;
-    max-width: 120rem;
+    max-width: 150rem;
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -399,9 +403,7 @@ p {
   }
   #img-carousel-container {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 4rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -411,18 +413,24 @@ p {
     z-index: 2;
   }
   #close-carousel {
+    display: block;
     position: relative;
     top: 10px;
-    left: 17vw;
+    left: 66.5vw;
   }
   #close-carousel:hover {
     cursor: pointer;
-    opacity: 0.5;
+  }
+  #close-carousel:hover path {
+    fill: var(--orange);
   }
   #img-carousel {
     width: 35vw;
+    max-width: 55rem;
     height: 35vw;
+    max-height: 55rem;
     border-radius: 1.5rem;
+    margin: 2rem auto;
   }
   #img-btn-previous,
   #img-btn-next {
@@ -435,13 +443,17 @@ p {
     right: -4rem;
   }
   #carousel-thumbnail-group {
+    width: 35vw;
+    max-width: 55rem;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
-    width: 55rem;
+    justify-content: space-evenly;
   }
   .carousel-thumbnail-border {
-    width: 8.8rem;
-    height: 8.8rem;
+    width: 5vw;
+    max-width: 8.8rem;
+    height: 5vw;
+    max-height: 8.8rem;
     border-radius: 10px;
     /*outline: 2px solid rgba(255, 125, 26, 1);*/
   }
@@ -455,17 +467,21 @@ p {
     opacity: 0.5;
   }
   #img-desktop {
-    width: 44.5rem;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    width: 44.5rem;
+    height: auto;
   }
   #img-main-desktop {
     width: 100%;
     border-radius: 15px;
     grid-area: img-main;
+  }
+  #img-main-desktop:hover {
+    cursor: pointer;
+    outline: 4px solid rgba(255, 125, 26, 1);
   }
   .thumbnail-group {
     width: 100%;
@@ -479,6 +495,9 @@ p {
   }
   .img-thumbnail-desktop:hover {
     cursor: pointer;
+    opacity: 0.5;
+  }
+  .half-opacity {
     opacity: 0.5;
   }
   .thumbnail-border {
@@ -515,7 +534,8 @@ p {
     width: 36rem;
     height: auto;
     min-height: 25.6rem;
-    top: 7.5rem;
-    left: 65vw;
+    top: 9rem;
+    left: 61%;
+    transform: none;
   }
 }
